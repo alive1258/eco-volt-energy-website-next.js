@@ -22,7 +22,7 @@ interface MessageWidgetProps {
 const formatTime = (iso: string) =>
   new Date(iso).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
 
-const STAFF_FALLBACK_NAME = "Eco Yachts Support";
+const STAFF_FALLBACK_NAME = "EcoVolt Support";
 
 const staffDisplayName = (message: ChatMessage) =>
   message.sender?.name || message.sender?.email?.split("@")[0] || STAFF_FALLBACK_NAME;
@@ -77,7 +77,7 @@ const MessageWidget = ({
       >
         <div className="flex items-start justify-between gap-3 bg-brand-900 p-5">
           <div>
-            <p className="font-bold text-white">Chat with Eco Yachts</p>
+            <p className="font-bold text-white">Chat with EcoVolt Energy</p>
             <p className="mt-1 flex items-center gap-1.5 text-xs text-brand-100/70">
               <span
                 className={`h-1.5 w-1.5 rounded-full ${

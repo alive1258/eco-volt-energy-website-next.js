@@ -22,31 +22,33 @@ const MobileMenuSheet = ({
     <>
       <div
         onClick={onClose}
-        className={`fixed inset-0 z-95 bg-brand-950/50 transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-x-0 top-0 bottom-16 z-95 bg-black/40 transition-opacity duration-300 lg:hidden ${
           isOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
 
       {/* SHEET */}
       <div
-        className={`fixed inset-y-0 right-0 z-95 h-full w-full max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed inset-x-0 bottom-[calc(2rem+env(safe-area-inset-bottom))] z-95 mx-auto max-h-[80vh] max-w-md rounded-t-3xl bg-white shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
+          isOpen ? "translate-y-0" : "translate-y-[calc(100%+2rem)]"
         }`}
       >
-        <div className="flex items-center justify-between px-6 py-5 border-b border-brand-900/10">
+        <div className="mx-auto mt-3 h-1.5 w-12 rounded-full bg-brand-900/15" />
+
+        <div className="flex items-center justify-between px-6 pb-4 pt-3">
           <Logo variant="dark" size="sm" />
           <button
             type="button"
             onClick={onClose}
             aria-label="Close menu"
-            className="flex h-9 w-9 items-center justify-center rounded-full text-brand-900 transition hover:bg-brand-50"
+            className="flex h-8 w-8 items-center justify-center rounded-full text-brand-900 transition hover:bg-brand-50"
           >
             <X size={20} />
           </button>
         </div>
 
-        <div className="h-[calc(100%-76px)] overflow-y-auto px-6 py-6">
-          <div className="space-y-5">
+        <div className="max-h-[calc(80vh-72px)] overflow-y-auto px-6 pb-24">
+          <div className="space-y-4">
             {MENU_ITEMS.map((item) => {
               if (!item.children) {
                 return (

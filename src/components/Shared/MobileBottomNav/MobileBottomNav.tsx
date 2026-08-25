@@ -42,9 +42,9 @@ const NAV_LINKS: NavEntry[] = [
   },
   {
     type: "link",
-    key: "yachts",
-    label: "Yachts",
-    href: "/yachts",
+    key: "services",
+    label: "Services",
+    href: "/services",
     icon: (active) => (
       <svg
         viewBox="0 0 24 24"
@@ -55,16 +55,15 @@ const NAV_LINKS: NavEntry[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M4 16h16l-2 3H6l-2-3Z" />
-        <path d="M12 4v10M12 4l4 6h-8" />
+        <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
       </svg>
     ),
   },
   {
     type: "link",
-    key: "destinations",
-    label: "Destinations",
-    href: "/destinations",
+    key: "projects",
+    label: "Projects",
+    href: "/projects",
     icon: (active) => (
       <svg
         viewBox="0 0 24 24"
@@ -75,8 +74,10 @@ const NAV_LINKS: NavEntry[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21Z" />
-        <circle cx="12" cy="9.5" r="2.2" />
+        <rect x="3.5" y="4.5" width="7" height="7" rx="1" />
+        <rect x="13.5" y="4.5" width="7" height="7" rx="1" />
+        <rect x="3.5" y="14.5" width="7" height="7" rx="1" />
+        <rect x="13.5" y="14.5" width="7" height="7" rx="1" />
       </svg>
     ),
   },
